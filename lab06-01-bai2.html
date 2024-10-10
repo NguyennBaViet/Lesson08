@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="post" name="login">
+        <div>
+        <label for="username" id="txterror_username">Username</label>
+        <input type="text" name="username" id="username" placeholder="Nhập tài khoản">
+        </div>
+        <div>
+            <label for="password" id="txterror_password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Nhập mật khẩu">
+        </div>
+        <div>
+            <input type="button" id="login" value="Login" onclick="checkLogin()">
+        </div>
+    </form>
+    <script>
+    function checkLogin(){
+        var userName = document.getElementById("username");
+        var password = document.getElementById("password");
+        if (userName.value==""){
+            document.getElementById("txterror_username").innerHTML ="Bạn chưa nhập tài khoản"
+            document.getElementById("txterror_username").className ="error"
+            userName.focus();
+        }else if(password.value.trim()==""){
+             document.getElementById("txterror_password").innerHTML ="Bạn chưa nhập tài khoản"
+            document.getElementById("txterror_password").className ="error"
+            password.focus();
+        }
+       }
+
+    </script>
+</body>
+</html>

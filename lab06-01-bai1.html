@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <form action="post" name="login">
+        <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="Nhập tài khoản">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Nhập mật khẩu">
+        </div>
+        <div>
+            <input type="button" id="login" value="Login" onclick="checkLogin()">
+        </div>
+    </form>
+<!--     <form action="">
+        <table width="350">
+            <caption>
+                <h2>Login</h2>
+            </caption>
+            <tr>
+                <td>Username</td>
+                <td>
+                    <input type="text" name="userName" id="username" placeholder="Nhập tên tài khoản">
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="password" id="password" placeholder="Nhập mật khẩu">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" id="login" name="login" onclick="checkLogin()">
+                </td>
+            </tr>
+        </table>
+    </form> -->
+    <script>
+       /*  function checkUser(){
+            var username = document.getElementById('username').value;
+            if(username == "" || username == null){
+                alert("Vui lòng nhập tên tài khoản!!!")
+            }
+        }
+        function checkPassword(){
+             var password = document.getElementById('password').value;
+             if(password == "" || password == null){
+                alert("Vui lòng nhập mật khẩu!!!")
+             }
+        }
+        function check(){
+           event.preventDefault()
+           checkUser();
+           checkPassword();
+        } */
+       function checkLogin(){
+        var userName = document.getElementById("username");
+        var password = document.getElementById("password");
+        if (userName.value==""){
+            alert("Bạn chưa nhập userName");
+            userName.focus();
+        }else if(password.value.trim()==""){
+            alert("Bạn chưa nhập mật khẩu");
+            password.focus();
+        }
+       }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rengular Exception</title>
+    <style>
+        #error-email{
+            display: none;
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <form action="post">
+        <div>
+            <label for="email">email</label>
+            <input type="text" name="email" id="email" onchange="checkEmail()">
+            <div id="error-email">
+                Email chưa đúng định dạng
+            </div>
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <input type="submit" name="submit" id="submit">
+        </div>
+    </form>
+    <script>
+        function checkEmail(){
+            var regx =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            var email_ = document.getElementById('email').value;
+            if(regx.test(email_)){
+                console.log("none");
+                document.getElementById('error-email').style.display ="none";
+            }else{
+                document.getElementById('error-email').style.display ="block";
+            }
+        }
+    </script>
+</body>
+</html>
